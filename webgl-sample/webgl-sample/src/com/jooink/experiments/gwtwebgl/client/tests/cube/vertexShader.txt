@@ -1,0 +1,37 @@
+attribute highp vec3 aVertexNormal;
+
+attribute highp vec3 aVertexPosition;
+
+uniform highp mat4 uNormalMatrix;
+
+uniform highp mat4 uMVMatrix;
+
+uniform highp mat4 uPMatrix;
+
+uniform highp vec3 uAmbientLight;
+
+uniform highp vec3 uLightColor;
+
+uniform highp vec3 uLightDirection;
+
+ 
+
+varying highp vec3 vLighting;
+
+void main(void) {
+
+  gl_Position = uPMatrix*uMVMatrix*vec4(aVertexPosition, 1.0);
+
+   
+
+  highp vec4 transformedNormal =
+
+           normalize(uNormalMatrix * vec4(aVertexNormal, 0.0));
+
+  highp float directional =
+
+          max(dot(transformedNormal.xyz, uLightDirection), 0.0);
+
+  vLighting = uAmbientLight + (uLightColor * directional);
+
+}
