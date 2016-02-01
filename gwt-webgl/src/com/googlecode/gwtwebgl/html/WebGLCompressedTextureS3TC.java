@@ -15,17 +15,26 @@
  */
 package com.googlecode.gwtwebgl.html;
 
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
+
 
 /**
   * 
   */
+@JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public interface WebGLCompressedTextureS3TC {
 
+    @JsOverlay
     static final int COMPRESSED_RGBA_S3TC_DXT1_EXT = 0x83F1;
 
+    @JsOverlay
     static final int COMPRESSED_RGBA_S3TC_DXT3_EXT = 0x83F2;
 
+    @JsOverlay
     static final int COMPRESSED_RGBA_S3TC_DXT5_EXT = 0x83F3;
 
+    @JsOverlay
     static final int COMPRESSED_RGB_S3TC_DXT1_EXT = 0x83F0;
 }

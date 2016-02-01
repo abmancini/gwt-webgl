@@ -15,11 +15,15 @@
  */
 package com.googlecode.gwtwebgl.html;
 
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
 
-/**
-  * 
-  */
+
+
+@JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public interface OESStandardDerivatives {
 
-    static final int FRAGMENT_SHADER_DERIVATIVE_HINT_OES = 0x8B8B;
+	@JsOverlay
+	static final int FRAGMENT_SHADER_DERIVATIVE_HINT_OES = 0x8B8B;
 }

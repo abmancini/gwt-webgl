@@ -2,14 +2,14 @@
 
 
 
- <source path='client'/>
+	<source path='client' />
 
- <!-- left in html and js packages to reflect elemental generated code structure -->
- <source path='html'/>
- <source path='js'/>
- 
- <!--  not from elemental -->
- <source path='utils'/>
- 
+	<!-- left in html and js packages to reflect elemental generated code structure -->
+	<source path='html' />
+	<source path='js' />
+
+	<!--  not from elemental -->
+	<source path='utils' />
+
 
 </module>

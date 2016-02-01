@@ -15,10 +15,14 @@
  */
 package com.googlecode.gwtwebgl.html;
 
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
+
 
 /**
   * 
   */
+@JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public interface WebGLLoseContext {
 
   void loseContext();

@@ -15,33 +15,52 @@
  */
 package com.googlecode.gwtwebgl.html;
 
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
 
 /**
  * 
  */
-public interface WebGLContextAttributes {
 
-	boolean isAlpha();
+@JsType(namespace = JsPackage.GLOBAL, isNative = true, name="Object")
+public class WebGLContextAttributes {
 
-	void setAlpha(boolean arg);
 
-	boolean isAntialias();
+	@JsProperty
+	public native boolean isAlpha();
 
-	void setAntialias(boolean arg);
-
-	boolean isDepth();
-
-	void setDepth(boolean arg);
-
-	boolean isPremultipliedAlpha();
-
-	void setPremultipliedAlpha(boolean arg);
-
-	boolean isPreserveDrawingBuffer();
-
-	void setPreserveDrawingBuffer(boolean arg);
-
-	boolean isStencil();
-
-	void setStencil(boolean arg);
+	@JsProperty
+	public native void setAlpha(boolean arg);
+	
+	@JsProperty
+	public native boolean isAntialias();
+	
+	@JsProperty
+	public native void setAntialias(boolean arg);
+	
+	@JsProperty
+	public native boolean isDepth();
+	
+	@JsProperty
+	public native void setDepth(boolean arg);
+	
+	@JsProperty	
+	public native boolean isPremultipliedAlpha();
+	
+	@JsProperty
+	public native void setPremultipliedAlpha(boolean arg);
+	
+	@JsProperty
+	public native boolean isPreserveDrawingBuffer();
+	
+	@JsProperty
+	public native void setPreserveDrawingBuffer(boolean arg);
+	
+	@JsProperty
+	public native boolean isStencil();
+	
+	@JsProperty
+	public native void setStencil(boolean arg);
 }

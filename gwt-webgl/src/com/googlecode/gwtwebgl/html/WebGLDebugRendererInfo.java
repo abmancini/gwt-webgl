@@ -15,13 +15,20 @@
  */
 package com.googlecode.gwtwebgl.html;
 
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
+
 
 /**
   * 
   */
+@JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public interface WebGLDebugRendererInfo {
 
+    @JsOverlay
     static final int UNMASKED_RENDERER_WEBGL = 0x9246;
 
+    @JsOverlay
     static final int UNMASKED_VENDOR_WEBGL = 0x9245;
 }

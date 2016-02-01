@@ -15,19 +15,28 @@
  */
 package com.googlecode.gwtwebgl.html;
 
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
 
-/**
-  * 
-  */
+
+
+@JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public interface OESVertexArrayObject {
 
-    static final int VERTEX_ARRAY_BINDING_OES = 0x85B5;
+	@JsOverlay
+	static final int VERTEX_ARRAY_BINDING_OES = 0x85B5;
 
-  void bindVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
+	@JsMethod
+	void bindVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
 
-  WebGLVertexArrayObjectOES createVertexArrayOES();
+	@JsMethod
+	WebGLVertexArrayObjectOES createVertexArrayOES();
 
-  void deleteVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
+	@JsMethod
+	void deleteVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
 
-  boolean isVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
+	@JsMethod
+	boolean isVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
 }

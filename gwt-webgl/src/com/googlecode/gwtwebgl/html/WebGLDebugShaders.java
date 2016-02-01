@@ -15,10 +15,16 @@
  */
 package com.googlecode.gwtwebgl.html;
 
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
+
 
 /**
   * 
   */
+
+@JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public interface WebGLDebugShaders {
 
   String getTranslatedShaderSource(WebGLShader shader);
