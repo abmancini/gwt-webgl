@@ -1,7 +1,10 @@
 # gwt-webgl
 Automatically exported from code.google.com/p/gwt-webgl
 
+Originally based on Elemental 1.0 code
+
 Small (low level)  wrapper around WebGL. 
+
 
 = branch master uses jsni 
 
